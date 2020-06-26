@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Chat app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"
+      defer
+    ></script>
+    <script type="module" src="scripts/main.js" defer></script>
+  </head>
+  <body>
+    <div class="chat-window">
+      <div id="chatMessages" class="chat-messages"></div>
+      <form id="newMessageForm" class="chat-controls">
+        <input id="userName" />
+        <input id="message" />
+        <input id="submitBtn" type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>

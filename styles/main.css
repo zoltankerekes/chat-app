@@ -1,0 +1,85 @@
+html {
+  background: url(../images/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  min-width: 225px;
+  height: 600px;
+  width: 50%;
+  padding: 15px;
+  position: relative;
+  border-radius: 35px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.chat-messages {
+  display: flex;
+  overflow: auto;
+  height: 550px;
+  flex-direction: column;
+  text-align: right;
+}
+
+.chat-messages > div p {
+  background: rgba(134, 230, 243, 0.75);
+  border-radius: 0.4em;
+  padding: 5px;
+  display: inline-flex;
+}
+
+.chat-messages > div.other-user-message {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.chat-messages > div.other-user-message p {
+  background: rgba(202, 96, 82, 0.671);
+}
+
+.chat-controls {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.chat-controls input {
+  border-radius: 0.4em;
+  padding: 5px;
+  margin: 3px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: lightgray;
+}
+
+#userName {
+  width: 70px;
+}
+
+#message {
+  flex: 1;
+}
+
+@media only screen and (max-width: 325px) {
+  #userName {
+    flex: 1;
+  }
+}
