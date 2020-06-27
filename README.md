@@ -1,3 +1,3 @@
-# chat-app
+# chatpplication
 
-Chat app. Start it with live server.
+Simple but modern and cosy. Start it with live server.
