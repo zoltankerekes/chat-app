@@ -1,5 +1,5 @@
 "use strict";
-import notifyMe from "./notification.js";
+import sendNotification from "./notification.js";
 
 const CHAT_SERVICE_ENDPOINT = "http://35.157.80.184:8080/";
 
@@ -15,19 +15,19 @@ const CHAT_SERVICE_ENDPOINT = "http://35.157.80.184:8080/";
   initEventListeners();
 
   function initEventListeners() {
-    socket.on("message", (data) => {
+    socket.on("message", data => {
       appendMessage(data.user, data.message);
 
       if (isMessageFromCurrentUser(data.user)) return;
 
-      notifyMe(data.message);
+      sendNotification(data.message);
     });
 
-    userNameInput.addEventListener("blur", (event) => {
+    userNameInput.addEventListener("blur", event => {
       currentUser = event.target.value;
     });
 
-    newMessageForm.addEventListener("submit", (event) => {
+    newMessageForm.addEventListener("submit", event => {
       event.preventDefault();
 
       const message = chatMessageInput.value;

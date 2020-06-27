@@ -1,6 +1,6 @@
 "use strict";
 
-export default function notifyMe(message) {
+export default function sendNotification(message) {
   if (!("Notification" in window)) {
     alert("This browser does not support desktop notification");
   } else if (Notification.permission === "granted") {
