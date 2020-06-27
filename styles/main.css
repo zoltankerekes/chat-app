@@ -25,7 +25,7 @@ body {
   color: white;
   min-width: 225px;
   height: 600px;
-  width: 50%;
+  width: 60%;
   padding: 15px;
   position: relative;
   border-radius: 35px;
@@ -78,8 +78,30 @@ body {
   flex: 1;
 }
 
-@media only screen and (max-width: 325px) {
+@media only screen and (max-width: 450px) {
+  .chat-window {
+    width: 100%;
+  }
   #userName {
     flex: 1;
+    width: auto;
+  }
+}
+
+@media only screen and (max-height: 400px) {
+  .chat-window {
+    height: 320px;
+  }
+}
+
+@media only screen and (max-height: 600px) {
+  .chat-window {
+    height: 500px;
+  }
+}
+
+@media only screen and (max-height: 400px) {
+  .chat-window {
+    height: 320px;
   }
 }
