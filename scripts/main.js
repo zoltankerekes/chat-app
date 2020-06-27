@@ -16,7 +16,7 @@ const CHAT_SERVICE_ENDPOINT = "http://35.157.80.184:8080/";
 
   function initEventListeners() {
     socket.on("message", data => {
-      appendMessage(data.user, data.message);
+      addMessage(data.user, data.message);
 
       if (isMessageFromCurrentUser(data.user)) return;
 
@@ -43,7 +43,7 @@ const CHAT_SERVICE_ENDPOINT = "http://35.157.80.184:8080/";
     socket.emit("message", { message, user: currentUser });
   }
 
-  function appendMessage(userName, message) {
+  function addMessage(userName, message) {
     const newMessageElement = document.createElement("div");
     const textParagraph = document.createElement("p");
 
