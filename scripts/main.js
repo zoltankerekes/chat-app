@@ -1,5 +1,4 @@
 "use strict";
-import sendNotification from "./notification.js";
 
 const CHAT_SERVICE_ENDPOINT = "http://35.157.80.184:8080/";
 
@@ -19,8 +18,6 @@ const CHAT_SERVICE_ENDPOINT = "http://35.157.80.184:8080/";
       addMessage(data.user, data.message);
 
       if (isMessageFromCurrentUser(data.user)) return;
-
-      sendNotification(data.message);
     });
 
     userNameInput.addEventListener("blur", event => {
